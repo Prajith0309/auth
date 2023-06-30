@@ -46,7 +46,7 @@ router.put('/update-quotes/:id/:userId',isAdmin,async(req,res)=>{
 })
 
 router.delete('/delete-quote/:userId',isAdmin,async (req,res)=>{
-    // res.clearCookie('t');
+    res.clearCookie('t');
     try{
         res.status(200).send('successfully deleted quote')
     }catch(err){
